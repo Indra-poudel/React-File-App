@@ -11,7 +11,7 @@ export default () => {
     homeDirectory: "",
   };
 
-  const homeDirectory = os.homedir() + "/Desktop";
+  const homeDirectory = os.homedir();
 
   fs.readdirSync(homeDirectory, { withFileTypes: true }).forEach((file) => {
     const absolutePath = path.join(homeDirectory, file.name);
